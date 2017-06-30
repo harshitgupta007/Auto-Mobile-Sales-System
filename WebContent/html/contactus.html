@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+<body>
+    <div class="container">
+                            <div class="form-group">
+                                <label class="col-md-4 col-sm-4 col-xs-12">State <span class="red">*</span></label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                    <select class="form-control" data-val="true"><option value="">Select State</option>
+<option value="1">Andaman and Nicobar</option>
+<option value="2">Andhra Pradesh</option>
+<option value="3">Arunachal Pradesh</option>
+<option value="4">Assam</option>
+<option value="5">Bihar</option>
+<option value="6">Chandigarh</option>
+<option value="7">Chattisgarh</option>
+<option value="8">Dadra and Nagar Haveli</option>
+<option value="9">Delhi</option>
+<option value="10">Goa</option>
+<option value="11">Gujarat</option>
+<option value="12">Haryana</option>
+<option value="13">Himachal Pradesh</option>
+<option value="14">Jammu and Kashmir</option>
+<option value="15">Jharkhand</option>
+<option value="16">Karnataka</option>
+<option value="17">Kerala</option>
+<option value="18">Madhya Pradesh</option>
+<option value="19">Maharashtra</option>
+<option value="20">Manipur</option>
+<option value="21">Mizoram</option>
+<option value="22">Nagaland</option>
+<option value="23">Odisha</option>
+<option value="24">Pondicherry</option>
+<option value="25">Punjab</option>
+<option value="26">Rajasthan</option>
+<option value="27">Sikkim</option>
+<option value="28">Tamil Nadu</option>
+<option value="29">Telangana</option>
+<option value="30">Tripura</option>
+<option value="31">Uttar Pradesh</option>
+<option value="32">Uttarakhand</option>
+<option value="34">West Bengal</option>
+</select>
+                                    <span class="field-validation-valid&#32;text-danger" data-valmsg-for="StateID" data-valmsg-replace="true"></span>
+                                    <input id="StateName" name="StateName" type="hidden" value="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 col-sm-4 col-xs-12">City <span class="red">*</span></label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                    <select class="form-control" data-val="true" data-val-number="The&#32;field&#32;CityID&#32;must&#32;be&#32;a&#32;number." data-val-required="Please&#32;select&#32;city." id="CityID" name="CityID" onchange="FillDealer()" required="required"><option value="">Select City</option>
+</select>
+                                    <span class="field-validation-valid&#32;text-danger" data-valmsg-for="CityID" data-valmsg-replace="true"></span>
+                                    <input id="CityName" name="CityName" type="hidden" value="" />
+                                </div>
+                            </div>
+                            <div class="form-group hidden" id="divDealer">
+                                <label class="col-md-4 col-sm-4 col-xs-12">Dealer Name <span class="red">*</span></label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                    <select class="form-control" data-val="true" data-val-number="The&#32;field&#32;DealerID&#32;must&#32;be&#32;a&#32;number." id="DealerID" name="DealerID" onchange="selectDealer()" required="required"><option value="">Select Dealer</option>
+</select>
+                                    <span class="field-validation-valid&#32;text-danger" data-valmsg-for="DealerID" data-valmsg-replace="true"></span>
+                                    <input id="DealerName" name="DealerName" type="hidden" value="" />
+                                </div>
+                            </div>
+                            <div class="form-group hidden" id="divModel">
+                                <label class="col-md-4 col-sm-4 col-xs-12">Model <span class="red">*</span></label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                    <select class="form-control" data-val="true" data-val-number="The&#32;field&#32;ModelID&#32;must&#32;be&#32;a&#32;number." id="ModelID" name="ModelID" onchange="selectModel()" required="required"><option value="">Select Model</option>
+<option value="12">Activa 125</option>
+<option value="15">Activa 4G</option>
+<option value="13">Activa i</option>
+<option value="14">Aviator</option>
+<option value="3">CB 1000R</option>
+<option value="19">CB Hornet 160R</option>
+<option value="8">CB Shine</option>
+<option value="18">CB Shine SP</option>
+<option value="20">CB Unicorn 150</option>
+<option value="6">CB Unicorn 160</option>
+<option value="2">CBR 1000RR</option>
+<option value="5">CBR 150R</option>
+<option value="4">CBR 250R</option>
+<option value="16">CBR 650F</option>
+<option value="11">CD110 Dream</option>
+<option value="7">Dio</option>
+<option value="10">Dream Neo</option>
+<option value="9">Dream Yuga</option>
+<option value="1">Goldwing</option>
+<option value="17">Livo</option>
+<option value="21">Navi</option>
+</select>
+                                    <span class="field-validation-valid&#32;text-danger" data-valmsg-for="ModelID" data-valmsg-replace="true"></span>
+                                    <input id="ModelName" name="ModelName" type="hidden" value="" />
+                                </div>
+                            </div>
+                                              <div class="form-group">
+                                <label class="col-md-4 col-sm-4 col-xs-12">Your Name <span class="red">*</span></label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <select class="form-control" data-val="true" data-val-required="Please&#32;select&#32;title." id="TitleID" name="TitleID" required="required"><option value="">Title</option>
+<option value="Mr.">Mr.</option>
+<option value="Ms.">Ms.</option>
+</select>
+                                    <span class="field-validation-valid&#32;text-danger" data-valmsg-for="TitleID" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input Style="max-width:&#32;100%;" class="form-control&#32;text-box&#32;single-line" data-val="true" data-val-required="Please&#32;enter&#32;name." id="Name" name="Name" required="required" type="text" value="" />
+                                    <span class="field-validation-valid&#32;text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 col-sm-4 col-xs-12">Your E-mailID <span class="red">*</span></label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                    <input Style="max-width:&#32;100%;" class="form-control&#32;text-box&#32;single-line" data-val="true" data-val-regex="Please&#32;enter&#32;a&#32;valid&#32;E-mail" data-val-regex-pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$" data-val-required="Please&#32;enter&#32;email." id="Email" name="Email" required="required" type="text" value="" />
+                                    <span class="field-validation-valid&#32;text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 col-sm-4 col-xs-12">Mobile <span class="red">*</span></label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input Style="max-width:&#32;100%;" class="form-control&#32;text-box&#32;single-line" data-val="true" data-val-maxlength="Mobile&#32;No&#32;must&#32;be&#32;a&#32;maximum&#32;length&#32;of&#32;10." data-val-maxlength-max="10" data-val-minlength="Mobile&#32;No&#32;must&#32;be&#32;a&#32;minimum&#32;length&#32;of&#32;10." data-val-minlength-min="10" data-val-regex="Please&#32;enter&#32;a&#32;valid&#32;mobile&#32;no." data-val-regex-pattern="^[7-9]\d{9}$" data-val-required="Please&#32;enter&#32;mobile&#32;no." id="MobileNo" name="MobileNo" required="required" type="text" value="" />
+                                    <span class="field-validation-valid&#32;text-danger" data-valmsg-for="MobileNo" data-valmsg-replace="true"></span>
+                                </div>
+                               
+                            </div>
+                           
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 col-sm-4 col-xs-12">Telephone No.</label>
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+                                    <input Style="max-width:&#32;100%;" class="form-control&#32;text-box&#32;single-line" id="STDCode" name="STDCode" placeholder="STD&#32;Code" type="text" value="" />
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <input Style="max-width:&#32;100%;" class="form-control&#32;text-box&#32;single-line" id="PhoneNo" name="PhoneNo" type="text" value="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 col-sm-4 col-xs-12">Message</label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                    <textarea Style="max-width:&#32;100%;" class="form-control" cols="20" id="Message" name="Message" rows="2">
+</textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                <button id="submit" type="submit" onclick="validateForm()">Submit</button>
+                                <button id="btnReset" type="reset">Reset</button>
+    </div></body></html>
+                        <h3>Customer Care</h3>
+                                <p><strong><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:18001033434">1800 103 3434</a> (Toll Free) Timing:&nbsp;8:00 AM to 9:00 PM</strong></p>
+                           
