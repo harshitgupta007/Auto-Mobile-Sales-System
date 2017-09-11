@@ -1,0 +1,12 @@
+complete_erd.mwd :
+======================
+
+this file contained table, view, trigger ER diagram which is generated
+by using mysql-workbench reverse engeeniring tool.
+
+
+table_erd.mwb :
+===================
+this file contained only table ER diagram which is generated
+by using mysql-workbench reverse engeeniring tool.
+
