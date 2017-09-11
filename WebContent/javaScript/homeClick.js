@@ -313,7 +313,7 @@ function applyPassword()
 
 function bikeInformation()
 {
-	$("#div5").empty();
+	//$("#div5").empty();
 	$("#div7").empty();
 
 	$("#div6").empty();
