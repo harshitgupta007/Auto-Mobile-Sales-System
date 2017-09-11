@@ -8,7 +8,7 @@
 		    ResultSet rs=null;
         Class.forName("com.mysql.jdbc.Driver");
 	    con=DriverManager.getConnection("jdbc:mysql://localhost:3306/login","root","baba");
-	   pst=con.prepareStatement("select * from showroomlogin where username=? and password=?");
+	   pst=con.prepareStatement("select * from showroomlogin where username=? and password=md5(?)");
 	   pst.setString(1,username);
 	   pst.setString(2,password);
 	   rs = pst.executeQuery();
