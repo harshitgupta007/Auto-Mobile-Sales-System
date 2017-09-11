@@ -1,0 +1,5 @@
+this folder contained mysql import file generated with the help of 
+mysql-workbench 
+
+Note: before import/export in mysql-workbench again delete help.txt file the further proceed
+
